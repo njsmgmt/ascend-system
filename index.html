@@ -684,19 +684,33 @@
   .footer-email:hover { color: #f5f5f7; }
 
   .cta-btn {
-    display: inline-block;
-    background: var(--blue);
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #000000;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 13px 28px;
     border-radius: 980px;
     text-decoration: none;
-    letter-spacing: -0.01em;
-    transition: background 0.15s;
+    letter-spacing: -0.02em;
+    transition: all 0.2s;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.15), 0 4px 20px rgba(255,255,255,0.08);
   }
 
-  .cta-btn:hover { background: var(--blue-hover); }
+  .cta-btn::after {
+    content: '→';
+    font-size: 16px;
+    transition: transform 0.2s;
+  }
+
+  .cta-btn:hover {
+    background: #f0f0f0;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.2), 0 6px 28px rgba(255,255,255,0.14);
+  }
+
+  .cta-btn:hover::after { transform: translateX(3px); }
 
   .footer-bottom {
     padding: 20px 0;
@@ -709,14 +723,14 @@
 
   .footer-copy {
     font-size: 11px;
-    color: #2a2a2a;
+    color: #6e6e73;
     font-family: 'DM Mono', monospace;
     letter-spacing: 0.03em;
   }
 
   .footer-legal {
     font-size: 11px;
-    color: #2a2a2a;
+    color: #6e6e73;
     font-family: 'DM Mono', monospace;
     letter-spacing: 0.03em;
   }
@@ -1065,7 +1079,9 @@
       <div class="footer-brand-desc">Independent GTM consulting and AI-driven sales infrastructure for B2B businesses. Built by Nate Shelly.</div>
     </div>
     <div class="footer-links">
-      <a href="/cdn-cgi/l/email-protection#ee808f9a8bc09d868b828297ae80849d8389839ac08d8183" class="footer-email"><span class="__cf_email__" data-cfemail="9bf5faeffeb5e8f3fef7f7e2dbf5f1e8f6fcf6efb5f8f4f6">[email&#160;protected]</span></a>
+      <a href="/cdn-cgi/l/email-protection#452b2431206b362d2029293c052b2f36282228316b262a28" class="footer-email"><span class="__cf_email__" data-cfemail="543a3520317a273c3138382d143a3e27393339207a373b39">[email&#160;protected]</span></a>
+      <a href="https://www.linkedin.com/in/nate-shelly/" target="_blank" class="footer-email">linkedin.com/in/nate-shelly</a>
+      <a href="https://www.linkedin.com/company/njs-mgmt/" target="_blank" class="footer-email">linkedin.com/company/njs-mgmt</a>
       <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ24awX8ZLzArKr3LAf86LDOlzzpy9NT8Wi3pFJSjwzIduOquo4Ma7jKjFO5CGNxSnfTjQnHQsrh" target="_blank" class="cta-btn">Book a Call</a>
     </div>
   </div>
@@ -1075,7 +1091,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const benchmarks = {
     professional: [0.32, 0.18],
     financial:    [0.30, 0.17],
@@ -1128,7 +1144,4 @@
     document.getElementById('r-sends').textContent = sendsMonth;
     document.getElementById('r-convos').textContent = convos;
     document.getElementById('r-convos-sub').textContent =
-      Math.round(ar * 100) + '% acceptance × ' + Math.round(rr * 100) + '% reply rate';
-    document.getElementById('r-pipeline').textContent = fmt(pipeline);
-    document.getElementById('r-pipeline-sub').textContent =
-      'Based on ' + Math.round(closeRate * 100) + '% close rate ·
+      Math.round(ar * 100) + '% acc
