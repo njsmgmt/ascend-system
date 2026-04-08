@@ -218,7 +218,7 @@
   /* ── HOW IT WORKS ── */
   .steps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 14px;
     margin-bottom: 80px;
   }
@@ -760,7 +760,7 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 720px) {
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
-    .steps, .pricing, .reqs { grid-template-columns: 1fr; }
+    .steps, .reqs { grid-template-columns: repeat(2, 1fr); } .pricing { grid-template-columns: 1fr; }
     .breakdown-grid { grid-template-columns: 1fr; }
     .bi { border-right: none !important; }
     .roi-body { grid-template-columns: 1fr; gap: 32px; }
@@ -814,8 +814,8 @@
       <span class="stat-label">Cheaper Than<br>a BDR Per Meeting</span>
     </div>
     <div class="stat">
-      <span class="stat-num">$0</span>
-      <span class="stat-label">BDR Salary<br>Required</span>
+      <span class="stat-num">36%</span>
+      <span class="stat-label">Of Pipeline<br>From Inbound</span>
     </div>
   </div>
 </section>
@@ -844,6 +844,11 @@
       <div class="step-num">Step 03</div>
       <h3>Track & Follow Up</h3>
       <p>Every action logs to a live dashboard. Automated follow-up messages go out 5–10 days later to anyone who hasn't responded. Nothing falls through the cracks.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 04</div>
+      <h3>Inbound Starts Coming to You</h3>
+      <p>Daily outreach activity signals LinkedIn's algorithm that your profile is active and relevant — generating organic profile views and inbound connection requests from people you never contacted. These warm inbounds convert at a higher rate than cold outreach.</p>
     </div>
   </div>
 
@@ -965,13 +970,23 @@
         <div class="roi-field">
           <label>Your Industry</label>
           <select id="industry" onchange="calc()">
+            <option value="saas">SaaS / Software</option>
             <option value="professional">Professional Services / Consulting</option>
+            <option value="staffing">Staffing & Recruiting</option>
             <option value="financial">Accounting / Financial Advisory</option>
+            <option value="wealth">Financial Services / Wealth Management</option>
             <option value="insurance">Commercial Insurance</option>
+            <option value="mortgage">Mortgage & Lending</option>
             <option value="realestate">Commercial Real Estate</option>
             <option value="hr">HR / Executive Coaching</option>
             <option value="marketing">Marketing / PR Agency</option>
+            <option value="it">IT Services / MSP</option>
+            <option value="logistics">Logistics & Freight Brokerage</option>
+            <option value="healthcare">Healthcare / Medical Device Sales</option>
             <option value="legal">Law Firm (B2B)</option>
+            <option value="coaching">Business Coaching / Training</option>
+            <option value="events">Corporate Events / Event Planning</option>
+            <option value="franchise">Franchise Development</option>
             <option value="other">Other B2B Services</option>
           </select>
         </div>
